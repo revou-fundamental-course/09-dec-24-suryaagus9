@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Wanderlust Adventures</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Wanderlust Adventures</h1>
+        <nav>
+            <a href="#top">Home</a>
+            <a href="#our-package-section">Our Packages</a>
+            <a href="#call-us-section">Call Us</a>
+        </nav>
+    </header>
+    <hr/>
+
+    <main>
+        <header class="content-header" id="home-section">
+            <h1>Your Trusted Travel Agent</h1>
+            <h4>Your Happiness is Our Happiness</h4>
+            <h4 id="username-result"></h4>
+        </header>
+
+        <section class="main-container">
+            <aside class="about">
+                <div class="banner-img banner-1"></div>
+                <div class="banner-img banner-2"></div>
+                <div class="banner-img banner-3"></div>
+                <div class="banner-img banner-4"></div>
+
+                <div class="about-author">
+                    <p class="about-caption">Jelajahi Dunia Bersama Wanderlust Adventures</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Elon_Musk_Colorado_2022_%28cropped2%29.jpg/640px-Elon_Musk_Colorado_2022_%28cropped2%29.jpg"
+                        class="author-img" />
+                    <div class="author-data">
+                        <div class="author-name">Elon Musk</div>
+                        <div class="author-info">SpaceX, 52</div>
+                    </div>
+                </div>
+
+                <h2>Mengapa Memilih Kami?</h2>
+                <div class="package-item1">
+                    <div class="package-icon">
+                        <i data-feather="award"></i>
+                    </div>
+                    <div>
+                        <h3>Profesionalisme Terjamin</h3>
+                        <p>Kami menghadirkan layanan berkualitas tinggi yang dirancang untuk memberikan kenyamanan di
+                            setiap perjalanan Anda.</p>
+                    </div>
+                </div>
+                <div class="package-item1">
+                    <div class="package-icon">
+                        <i data-feather="heart"></i>
+                    </div>
+                    <div>
+                        <h3>Dedikasi Penuh</h3>
+                        <p>Kami berkomitmen untuk memberikan pengalaman perjalanan yang tak terlupakan dengan perhatian
+                            penuh pada detail.</p>
+                    </div>
+                </div>
+                <div class="package-item1">
+                    <div class="package-icon">
+                        <i data-feather="feather"></i>
+                    </div>
+                    <div>
+                        <h3>Paket Unik</h3>
+                        <p>Jelajahi dunia dengan paket wisata yang dirancang khusus untuk memenuhi gaya dan preferensi
+                            Anda.</p>
+                    </div>
+                </div>
+                <div class="package-item1">
+                    <div class="package-icon">
+                        <i data-feather="flag"></i>
+                    </div>
+                    <div>
+                        <h3>Destinasi Eksklusif</h3>
+                        <p>Temukan tempat-tempat luar biasa yang jarang dijelajahi, membawa Anda lebih dekat dengan
+                            keajaiban dunia.</p>
+                    </div>
+                </div>
+                <div class="package-item1">
+                    <div class="package-icon">
+                        <i data-feather="gift"></i>
+                    </div>
+                    <div>
+                        <h3>Pengalaman Tak Tertandingi</h3>
+                        <p>Perjalanan Anda adalah cerita yang kami bantu wujudkan, dengan sentuhan spesial di setiap
+                            langkahnya.</p>
+                    </div>
+                </div>
+            </aside>
+
+
+            <div class="contact">
+                <h2 class="subsection-title">Contact Us</h2>
+                <p>Sales akan menghubungi Anda 1x24 jam setelah data anda kami terima</p>
+                <form class="contact-form" name="contact-form" onsubmit="return validateForm()">
+                    <div class="form-field">
+                        <label for="name" class="input-label">Your name:</label>
+                        <input type="text" id="name" name="name" class="input-field"
+                            placeholder="First name and last name" oninput="fillInput('name')" />
+                        <p class="error-msg" id="name-error">Please fill your name</p>
+                    </div>
+                    <div class="form-field">
+                        <label for="email" class="input-label">Email Address:</label>
+                        <input type="text" id="email" name="email" class="input-field" placeholder="example@email.com"
+                            oninput="fillInput('email')" />
+                        <p class="error-msg" id="email-error">Please fill your email with a correct format</p>
+                    </div>
+                    <div class="form-field">
+                        <label for="interest" class="input-label">What are you interested in?</label>
+                        <select id="interest" name="interest" class="input-field" oninput="selectInterest()">
+                            <option value="none" selected disabled>Select option</option>
+                            <option value="option 1">Gunung Bromo</option>
+                            <option value="option 2">Nusa Penida Tour</option>
+                            <option value="option 3">Safari Jeep Adventure</option>
+                            <option value="option 4">Kawah Ijen</option>
+                            <option value="option 5">Candi Borobudur</option>
+                            <option value="option 6">Danau Toba</option>
+                        </select>
+                        <p class="error-msg" id="interest-error">Please select one interest</p>
+                    </div>
+                    <button type="submit" class="button">Send</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section id="our-package-section">
+            <header class="content-header our-packages-header">
+                <h1>Our Packages</h1>
+            </header>
+
+
+            <div class="container">
+                <div class="package-list">
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="sun"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Gunung Bromo</h3>
+                            <p>Gunung Bromo menawarkan pemandangan matahari terbit yang spektakuler dan lanskap vulkanik
+                                yang memukau,
+                                menjadi salah satu destinasi favorit di Indonesia.</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="slack"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Nusa Penida Tour</h3>
+                            <p>Nusa Penida adalah surga tropis yang menawarkan pantai berpasir putih, tebing megah, dan
+                                dunia bawah
+                                laut yang luar biasa.</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="target"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Safari Jeep Adventure</h3>
+                            <p>Jelajahi savana dengan Jeep Safari, menikmati pemandangan alam liar yang memukau dan
+                                keindahan flora
+                                serta fauna eksotis.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border" />
+                <div class="package-list">
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="compass"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Kawah Ijen</h3>
+                            <p>Rasakan keajaiban api biru di Kawah Ijen, fenomena langka yang hanya bisa dilihat di
+                                beberapa tempat
+                                di dunia.</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="umbrella"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Candi Borobudur</h3>
+                            <p>Candi Borobudur adalah monumen Buddha terbesar di dunia dan warisan budaya Indonesia yang
+                                megah.</p>
+                        </div>
+                    </div>
+                    <div class="package-item">
+                        <div class="package-icon">
+                            <i data-feather="star"></i>
+                        </div>
+                        <div class="package-content">
+                            <h3>Danau Toba</h3>
+                            <p>Kunjungi Danau Toba, danau vulkanik terbesar di dunia, dengan Pulau Samosir di tengahnya
+                                yang penuh
+                                sejarah dan budaya Batak.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="call-us-section">
+            <header class="content-header our-packages-header">
+                <h1>Call Us</h1>
+            </header>
+            <div class="container">
+                <p>Punya pertanyaan atau ingin konsultasi tentang perjalanan impian Anda? Tim kami siap membantu! Klik
+                    tombol di bawah untuk menghubungi kami.</p>
+                <a href="#"><button class="button">Kontak Kami</button></a>
+            </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <span>Wanderlust Adventures @2024</span>
+    </footer>
+    <script src="js\script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>
